@@ -12,7 +12,6 @@ const MHS = {
 let el1 = `<div class="mhs1">
     <h2>Nama: ${MHS.nama}</h2>
     <span class="nrp">Nrp: ${MHS.nrp}</span>
-
 </div>`;
 
 // 2. menambahkan fragment html yang menggunakan ternary operator

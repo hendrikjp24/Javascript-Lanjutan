@@ -40,7 +40,12 @@ const email = "Fathiyaalkhaira27@gmail.com";
 
 
 function showResult(strings, ...values){
-    return strings.reduce((resultValue, str, i) => `${resultValue}${str} <span class="higlight">${values[i] || ''}</span>`,'');
+    // return strings.reduce((resultValue, str, i) => `${resultValue}${str} <span class="higlight">${values[i] || ''}</span>`,'');
+
+
+    return strings.reduce((result, str, i) => {
+        return `${result}${str} <span class="higlight">${values[i] || ''}</span>`;    
+    },'');
 
 }
 
