@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px auto;
+}
+
+table, tr, th, td {
+    border: 1px solid black;
+}
+
+button:hover {
+    cursor: pointer;
+}
