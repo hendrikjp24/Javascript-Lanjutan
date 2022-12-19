@@ -38,26 +38,29 @@ const tbody = document.getElementsByTagName("tbody")[0];
 
 // Function untuk membuat template html Fragments
 function showDataFilter(strings){
-  return strings.map((e)=>{  //dia akan mem - map argument yang dimasukkan
-   //untuk mengulang tag tr
+//
+//    //
+//          ${e.map((e2)=>{ 
+   return strings.map((e,index)=>{ //dia akan mem - map argument yang dimasukkan
+      //untuk mengulang tag tr
+      let n = 1;
       return `<tr>
-         ${e.map((e2)=>{ //kemudian setiap array yang ada akan di map lagi
+         ${e.map((element,i)=>{//kemudian setiap array yang ada akan di map lagi
             //untuk membuat tag td untuk masing" isi array.
             //karena disini awalnya merupakan nested array (array di dalam array)
-            return `<td>${e2}</td>`;
+            
+            // Fungsi parseInt di bawah, itu untuk merubah string index ke Integer,
+            // Agar dapat di jumlahkan
+            return `<td>${(i == 0) ? `${parseInt(index)  + n}` : `${element}`}</td>`;
          }).join("")}
-      </tr>`;
+      </tr>`
    }).join("");
 }
-   // event pada button search 
-   btsearch.addEventListener("click", ()=>{
-      const resultFilter = FilterData(inputUser.value);
-      const templateData = showDataFilter(resultFilter);
 
-      tbody.innerHTML = templateData;
-   });
+// event pada button search 
+btsearch.addEventListener("click", ()=>{
+   const resultFilter = FilterData(inputUser.value);
+   const templateData = showDataFilter(resultFilter);
 
-
-
-
-
+   tbody.innerHTML = templateData;
+});
