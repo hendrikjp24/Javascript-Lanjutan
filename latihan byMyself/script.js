@@ -32,8 +32,32 @@ function FilterData(string){
    return cek;
 }  
    
+// uji coba menggantti tbody
+
+const tbody = document.getElementsByTagName("tbody")[0];
+
+// Function untuk membuat template html Fragments
+function showDataFilter(strings){
+  return strings.map((e)=>{  //dia akan mem - map argument yang dimasukkan
+   //untuk mengulang tag tr
+      return `<tr>
+         ${e.map((e2)=>{ //kemudian setiap array yang ada akan di map lagi
+            //untuk membuat tag td untuk masing" isi array.
+            //karena disini awalnya merupakan nested array (array di dalam array)
+            return `<td>${e2}</td>`;
+         }).join("")}
+      </tr>`;
+   }).join("");
+}
    // event pada button search 
    btsearch.addEventListener("click", ()=>{
-      console.log(FilterData(inputUser.value));
-      
+      const resultFilter = FilterData(inputUser.value);
+      const templateData = showDataFilter(resultFilter);
+
+      tbody.innerHTML = templateData;
    });
+
+
+
+
+
