@@ -1,0 +1,27 @@
+[
+    {
+        "nama": "Hendrik",
+        "nim": 2018202007,
+        "jurusan": "Manajemen Informatika"
+    },
+    {
+        "nama": "Ari",
+        "nim": 2018202002,
+        "jurusan": "Manajemen Informatika"
+    },
+    {
+        "nama": "Khaira",
+        "nim": 2018202009,
+        "jurusan": "Manajemen Informatika"
+    },
+    {
+        "nama": "Pertiwi",
+        "nim": 20182020010,
+        "jurusan": "Manajemen Informatika"
+    },
+    {
+        "nama": "Lauren",
+        "nim": 2018202008,
+        "jurusan": "Manajemen Informatika"
+    }
+]
