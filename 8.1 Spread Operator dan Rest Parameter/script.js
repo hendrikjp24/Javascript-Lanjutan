@@ -44,6 +44,9 @@ const liNama = document.querySelectorAll("li");
 
 const liAll = [...liNama].map(n => n.textContent);
 
+console.log(liNama);
+console.log(liAll);
+
 const nama = document.querySelector(".nama");
 
 const huruf = [...nama.textContent].map(h => `<span>${h}</span>`).join("");

@@ -79,7 +79,7 @@ const mhs = {
 console.log(`\n\nContoh for .. in`);
 
 
-for(dmhs in mhs){
+for(const dmhs in mhs){
     console.log(dmhs); //Ini akan mengambil nama propertinya
     console.log(`${mhs[dmhs]}`); // Ini akan mengambil isi dari propertinya
 }
